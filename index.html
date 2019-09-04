@@ -5,6 +5,7 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <style>
   .Head {
@@ -51,20 +52,28 @@
   .Logoheader {
     overflow: hidden;
     background-color:azure;
-    position: -webkit-sticky;
-    position: sticky;
-    padding: 10px 16px;
     overflow: auto;
     box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.4);
     top: 0;
+    
   }
 
   .logo {
-    height: 50px;
+    height: 70px;
     width: auto;
   }
   h5 {
     text-align: center;
+  }
+  header{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+  }
+  .header-right{
+    margin-top:-55px;;
   }
 </style>
 
@@ -75,7 +84,7 @@
         src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_300,h_300/http://redmaurosilva.com/wp-content/uploads/2016/11/MQTT-BROKER-FREE-1.png"
         class="logo">
       <div class="header-right">
-        <h6><b>My MQTT Website Application</b></h6>
+        <center><h3><b>My MQTT Website Application</b></h3></center>
       </div>
     </div>
   </header>

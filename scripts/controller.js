@@ -72,7 +72,17 @@ clickConnect.addEventListener('click', function () {
   })
 
   clickPublish.addEventListener('click', function () {
-    client.publish("mqtt/" + publishTopic.value, payload.value);
+    client.publish("mqtt/" + publishTopic.value, payload.value
+    //   if(err){
+    //     swal({
+    //       title: "Error!",
+    //       text: "You are not connected!",
+    //       icon: "error",
+    //       button:"OK",
+    //      });
+    //   }
+    // });
+  );
     timeStamp = new Date();
     var trPublish = document.createElement("tr");
     var tdTopicPublish = document.createElement("td");
