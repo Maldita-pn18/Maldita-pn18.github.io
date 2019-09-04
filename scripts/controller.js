@@ -19,7 +19,7 @@ clickConnect.addEventListener('click', function () {
   client = mqtt.connect(address.value) // CONNECT to BROKER ADDRESS
 
   clickSubscribe.addEventListener('click', function () {
-    client.subscribe("mqtt/" + inputSubscribe.value);
+    client.subscribe(inputSubscribe.value);
     timeStamp = new Date();
     var trSubscribe = document.createElement("tr");
     var tdTopicSubscribe = document.createElement("td");
@@ -36,7 +36,7 @@ clickConnect.addEventListener('click', function () {
   })
 
   clickUnsubscribe.addEventListener('click', function () {
-    client.unsubscribe("mqtt/" + inputSubscribe.value);
+    client.unsubscribe(inputSubscribe.value);
   })
 
 
@@ -60,7 +60,7 @@ clickConnect.addEventListener('click', function () {
     tdTopic.style.fontSize = "11px";
     tdPayload.style.fontSize = "11px";
     tdTimeStamp.style.fontSize = "11px";
-    tdTopic.appendChild(document.createTextNode(topic.substring(5)));
+    tdTopic.appendChild(document.createTextNode(topic));
     console.log(topic.substring(5));
     tdPayload.appendChild(document.createTextNode(payload));
     tdTimeStamp.appendChild(document.createTextNode(timeStamp));
@@ -72,7 +72,7 @@ clickConnect.addEventListener('click', function () {
   })
 
   clickPublish.addEventListener('click', function () {
-    client.publish("mqtt/" + publishTopic.value, payload.value
+    client.publish(publishTopic.value, payload.value
     //   if(err){
     //     swal({
     //       title: "Error!",
